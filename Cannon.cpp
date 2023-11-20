@@ -15,3 +15,7 @@ void Cannon::draw(sf::RenderWindow& window) {
     window.draw(body);
     window.draw(barrel);
 }
+
+sf::Vector2f Cannon::getBarrelPosition() {
+    return barrel.getPosition();
+}

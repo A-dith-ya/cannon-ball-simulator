@@ -8,6 +8,8 @@ public:
     Cannon(float x, float y);
     void draw(sf::RenderWindow& window);
 
+    sf::Vector2f getBarrelPosition();
+
 private:
     sf::RectangleShape body;
     sf::RectangleShape barrel;

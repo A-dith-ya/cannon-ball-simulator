@@ -2,10 +2,11 @@
 #define CANNONBALL_HPP
 
 #include <SFML/Graphics.hpp>
+#include "Cannon.hpp"
 
 class CannonBall {
 public:
-    CannonBall(float x, float y);
+    CannonBall(Cannon& cannon);
     void draw(sf::RenderWindow& window);
 
 private:

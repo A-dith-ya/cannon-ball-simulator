@@ -7,6 +7,7 @@ class Cannon {
 public:
     Cannon(float x, float y);
     void draw(sf::RenderWindow& window);
+    float getBarrelOrientation();
 
     sf::Vector2f getBarrelPosition();
 

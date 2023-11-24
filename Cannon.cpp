@@ -19,3 +19,7 @@ void Cannon::draw(sf::RenderWindow& window) {
 sf::Vector2f Cannon::getBarrelPosition() {
     return barrel.getPosition();
 }
+
+float Cannon::getBarrelOrientation() {
+    return barrel.getRotation();
+}

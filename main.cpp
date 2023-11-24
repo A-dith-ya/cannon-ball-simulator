@@ -6,7 +6,7 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(1500, 1000), "My window");
 
-    Cannon cannon(650.f, 500.f);
+    Cannon cannon(0.f, 500.f);
     CannonBall cannonBall(cannon);
 
     while (window.isOpen())
@@ -22,6 +22,8 @@ int main()
 
         cannon.draw(window);
         cannonBall.draw(window);
+
+        cannonBall.fireCannonBall(cannon);
         
         window.display();
     }

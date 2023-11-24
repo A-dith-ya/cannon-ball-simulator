@@ -8,7 +8,7 @@ class CannonBall {
 public:
     CannonBall(Cannon& cannon);
     void draw(sf::RenderWindow& window);
-    void fireCannonBall(Cannon& cannon);
+    void fireCannonBall(Cannon& cannon, sf::RenderWindow& window);
 
 private:
     sf::CircleShape ball;

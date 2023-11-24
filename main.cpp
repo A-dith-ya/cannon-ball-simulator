@@ -23,7 +23,7 @@ int main()
         cannon.draw(window);
         cannonBall.draw(window);
 
-        cannonBall.fireCannonBall(cannon);
+        cannonBall.fireCannonBall(cannon, window);
         
         window.display();
     }

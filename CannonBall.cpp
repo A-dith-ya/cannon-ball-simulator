@@ -22,6 +22,10 @@ void CannonBall::draw(sf::RenderWindow& window) {
     window.draw(ball);
 }
 
-void CannonBall::fireCannonBall(Cannon& cannon) {
+void CannonBall::fireCannonBall(Cannon& cannon, sf::RenderWindow& window) {
     ball.move(velocity);
+
+    if (ball.getPosition().x < 0 || ball.getPosition().x > window.getSize().x || ball.getPosition().y < 0 || ball.getPosition().y > window.getSize().y) {
+        ball.setPosition(cannon.getBarrelPosition().x, cannon.getBarrelPosition().y);
+    };
 }

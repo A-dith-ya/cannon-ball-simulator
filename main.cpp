@@ -16,6 +16,11 @@ int main()
         {
             if (event.type == sf::Event::Closed)
                 window.close();
+
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space) {
+                cannonBall.setVelocity(cannon);
+                cannonBall.isMoving = true;
+            }
         }
 
         window.clear();
@@ -23,7 +28,9 @@ int main()
         cannon.draw(window);
         cannonBall.draw(window);
 
-        cannonBall.fireCannonBall(cannon, window);
+        if (cannonBall.isMoving) {
+            cannonBall.fireCannonBall(cannon, window);
+        }
         
         window.display();
     }

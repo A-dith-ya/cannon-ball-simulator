@@ -9,6 +9,8 @@ public:
     CannonBall(Cannon& cannon);
     void draw(sf::RenderWindow& window);
     void fireCannonBall(Cannon& cannon, sf::RenderWindow& window);
+    void setVelocity(Cannon& cannon);
+    bool isMoving = false;
 
 private:
     sf::CircleShape ball;

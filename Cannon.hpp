@@ -14,6 +14,8 @@ public:
 private:
     sf::RectangleShape body;
     sf::RectangleShape barrel;
+    float rotation = -90;
+    bool rotateDown = true;
 };
 
 #endif

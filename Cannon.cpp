@@ -8,10 +8,25 @@ Cannon::Cannon(float x, float y) {
     barrel.setSize(sf::Vector2f(100.f, 25.f));
     barrel.setPosition(x + 15.f, y - 10.f);
     barrel.setFillColor(sf::Color::Blue);
-    barrel.setRotation(-45);
+    barrel.setRotation(rotation);
 }
 
 void Cannon::draw(sf::RenderWindow& window) {
+    const float rotationLimit = 90.0f;
+
+    if (rotateDown == true) {
+        rotation += 0.25;
+    } else {
+        rotation -= 0.25;
+    }
+
+    if(rotation > rotationLimit) {
+        rotateDown = false;
+    } else if (rotation < -rotationLimit) {
+        rotateDown = true;
+    }
+    
+    barrel.setRotation(rotation);
     window.draw(body);
     window.draw(barrel);
 }
